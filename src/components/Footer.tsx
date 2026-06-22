@@ -16,7 +16,7 @@ export default function Footer() {
                 <img src="/images/logo.png" alt="Neatasi Logo" className="w-full h-full object-contain" />
               </div>
               <span className="text-lg font-bold tracking-wider uppercase">
-                Neatasi <span className="text-amber-500 font-extrabold text-xs">Oil & Gas</span>
+                Nea Tasi <span className="text-amber-500 font-extrabold text-xs">Oil & Gas</span>
               </span>
             </Link>
             <p className="text-sm text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
@@ -39,13 +39,16 @@ export default function Footer() {
                 <Link href="/" className="hover:text-amber-500 transition-colors">Home Page</Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-amber-500 transition-colors">About History</Link>
+                <Link href="/profile" className="hover:text-amber-500 transition-colors">Company Profile</Link>
               </li>
               <li>
                 <Link href="/services" className="hover:text-amber-500 transition-colors">Key Divisions</Link>
               </li>
               <li>
                 <Link href="/projects" className="hover:text-amber-500 transition-colors">Active Operations</Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:text-amber-500 transition-colors">About History</Link>
               </li>
               <li>
                 <Link href="/contact" className="hover:text-amber-500 transition-colors">Contact Terminals</Link>

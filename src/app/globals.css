@@ -6,30 +6,30 @@
   --color-primary-200: #fde68a;
   --color-primary-300: #fcd34d;
   --color-primary-400: #fbbf24;
-  --color-primary-500: #fbbf24;
-  --color-primary-600: #d97706;
-  --color-primary-700: #b45309;
-  --color-primary-800: #92400e;
-  --color-primary-900: #78350f;
-  --color-primary-950: #451a03;
+  --color-primary-500: #d4af37; /* Logo Metallic Gold primary */
+  --color-primary-600: #c59b27;
+  --color-primary-700: #a37f1e;
+  --color-primary-800: #856616;
+  --color-primary-900: #6b5110;
+  --color-primary-950: #3f2f05;
 }
 
 :root {
-  --background: #f1f5f9; /* Polished Chrome Light Base */
+  --background: #f1f5f9; /* Frost Platinum Silver */
   --foreground: #0f172a;
   --card-bg: rgba(255, 255, 255, 0.75);
-  --card-border: rgba(212, 175, 55, 0.15); /* Logo Gold Bevel border */
+  --card-border: rgba(212, 175, 55, 0.12); /* Logo Gold Bevel border */
   --glow-color: rgba(212, 175, 55, 0.15);
   --nav-bg: rgba(241, 245, 249, 0.8);
 }
 
 .dark {
-  --background: #05070f; /* Deep Metallic Carbon/Slate Base */
+  --background: #060813; /* Deep Gunmetal Carbon Dark Base */
   --foreground: #f8fafc;
-  --card-bg: rgba(11, 15, 28, 0.65);
-  --card-border: rgba(212, 175, 55, 0.25); /* Glowing Logo Gold highlight */
-  --glow-color: rgba(212, 175, 55, 0.3);
-  --nav-bg: rgba(5, 7, 15, 0.85);
+  --card-bg: rgba(10, 15, 30, 0.65);
+  --card-border: rgba(212, 175, 55, 0.22); /* Glowing Logo Gold highlight */
+  --glow-color: rgba(212, 175, 55, 0.25);
+  --nav-bg: rgba(6, 8, 19, 0.85);
 }
 
 body {
@@ -46,6 +46,7 @@ body {
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--card-border);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.04);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .dark .glass-card {
@@ -59,7 +60,11 @@ body {
   border-bottom: 1px solid var(--card-border);
 }
 
-/* Glow Effect */
+/* Glowing outline matching logo gold and steel chrome */
+.glow-gold {
+  box-shadow: 0 0 15px var(--glow-color);
+}
+
 .glow-effect {
   position: relative;
 }
@@ -67,7 +72,7 @@ body {
   content: '';
   position: absolute;
   inset: -1px;
-  background: linear-gradient(135deg, #d4af37, #fbbf24, transparent);
+  background: linear-gradient(135deg, #d4af37, #cbd5e1, transparent);
   border-radius: inherit;
   z-index: -1;
   opacity: 0;
@@ -85,11 +90,11 @@ body {
   background: var(--background);
 }
 ::-webkit-scrollbar-thumb {
-  background: #fbbf24;
+  background: #d4af37;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #d4af37;
+  background: #c59b27;
 }
 
 /* Simulated Admin Control Widget Floating animation */
@@ -103,9 +108,9 @@ body {
   animation: float 3s ease-in-out infinite;
 }
 
-/* Polished Metallic Gold Gradient matching Logo */
+/* Custom Gradients matching Gold & Silver bevels of Logo */
 .bg-energy-gradient {
-  background: linear-gradient(135deg, #c59b27 0%, #fbbf24 50%, #fde68a 100%);
+  background: linear-gradient(135deg, #a7821b 0%, #d4af37 50%, #fde68a 100%);
 }
 
 .text-gradient {
@@ -113,4 +118,8 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(135deg, #d4af37 0%, #fbbf24 60%, #fde68a 100%);
+}
+
+.border-gradient-gold {
+  border-image: linear-gradient(to right, #d4af37, #cbd5e1) 1;
 }

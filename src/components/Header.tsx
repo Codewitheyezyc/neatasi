@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const NAV_ITEMS = [
   { label: 'Home', path: '/' },
+  { label: 'Profile', path: '/profile' },
   { label: 'Services', path: '/services' },
   { label: 'Projects', path: '/projects' },
   { label: 'About', path: '/about' },
@@ -55,7 +56,7 @@ export default function Header() {
               <div className="absolute inset-0 rounded-xl bg-amber-500/10 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
             <span className="text-xl font-bold tracking-wider uppercase font-sans">
-              Neatasi
+              Nea Tasi
               <span className="text-amber-500 font-extrabold text-sm ml-1 group-hover:animate-pulse">Oil & Gas</span>
             </span>
           </Link>
